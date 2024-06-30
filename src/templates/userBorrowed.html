@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}LMS-UserBorrowedBooks{% endblock %}
+
+
+{% block content %}
+
+<h1>User Borrow List</h1>
+<div>
+    <div>
+        
+        <p>Your borrowed books</p>
+    </div>
+    <div>
+        <h2>Your fine total: RM{{ total_fine }}</h2>
+    </div>
+</div>
+<br>
+    <form method="get">
+        {{myFilter.form}}
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+<br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Book</th>
+                <th scope="col">Borrower</th>
+                <th scope="col">Borrowdate</th>
+                <th scope="col">Expected Returndate</th>
+                <th scope="col">Returndate</th>  
+                <th scope="col">Fine</th>  
+            </tr>
+        </thead>
+        <tbody>
+            {% for borrowList in borrowList %}
+            <tr>
+            <th scope="row">{{ borrowList.id }}</th>
+            <td>{{ borrowList.book.title }}</td>
+            <td>{{ borrowList.borrower }}</td>
+            <td>{{ borrowList.borrow_date }}</td>
+            <td>{{ borrowList.expected_return_date }}</td>
+            <td>{{ borrowList.return_date }}</td>
+            <td>{{ borrowList.fine }}</td>
+
+            </tr>
+            {% endfor %}
+
+        </tbody>
+  </table>
+
+{% endblock %}

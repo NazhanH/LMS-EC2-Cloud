@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+body {
+    background-image: url('img/background.jpg');
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.header {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 260px 0 0 0;
+    min-height: 35vh;
+}
+
+.content {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.box1 {
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    width: 200px;
+    height: 100px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-image: linear-gradient(to right, #e052a0, #f15c41) !important;
+    border-radius: 30px;
+    padding: 30px 10px;
+    white-space: nowrap;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.box2 {
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    width: 200px;
+    height: 100px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-image: linear-gradient(to right, #e052a0, #f15c41) !important;
+    border-radius: 30px;
+    padding: 30px 10px;
+    white-space: nowrap;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.box3 {
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    width: 200px;
+    height: 100px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-image: linear-gradient(to right, #e052a0, #f15c41) !important;
+    border-radius: 30px;
+    padding: 30px 10px;
+    white-space: nowrap;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+a:link, a:visited {
+    color: #D7DBDD;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}

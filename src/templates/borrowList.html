@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}LMS-BorrowList{% endblock %}
+
+
+{% block content %}
+
+
+<h1>Borrow List</h1>
+<p><a href="{% url 'borrowBook' %}">Add borrowers here</a></p>
+
+<br>
+    <form method="get">
+        {{myFilter.form}}
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+<br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">BorrowID</th>
+                <th scope="col">Book</th>
+                <th scope="col">Borrower</th>
+                <th scope="col">Borrowdate</th> 
+                <th scope="col">return</th>   
+            </tr>
+        </thead>
+        <tbody>
+            {% for borrowList in borrowList %}
+            {% if not borrowList.return_date %}
+            <tr>
+            <th scope="row">{{ borrowList.id }}</th>
+            <td>{{ borrowList.book.title }}</td>
+            <td>{{ borrowList.borrower }}</td>
+            <td>{{ borrowList.borrow_date }}</td>
+
+            <td><a class="btn btn-sm btn-info" href="{% url 'returnBook' borrowList.id %}" >return</a></td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+
+        </tbody>
+  </table>
+
+{% endblock %}
