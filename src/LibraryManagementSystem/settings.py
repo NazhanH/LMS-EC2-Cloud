@@ -82,27 +82,16 @@ WSGI_APPLICATION = 'LibraryManagementSystem.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "mydatabase",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'LMS',
+        'USER': 'admin',
+        'PASSWORD': 'Password321',
+        'HOST': '<RDS ENDPOINT>',
+        'PORT': '3306',
     }
 }
 
-""" {
-    'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'LMS',
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': '',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-            'Trusted_Connection': 'yes',
-        },
-        
-    }
-} """
 
 
 # Password validation
