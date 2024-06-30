@@ -11,6 +11,8 @@ class Book(models.Model):
     def __str__(self):
         return (str(self.id) + self.title)
     
+
+    
 class BorrowList(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     borrower = models.ForeignKey('auth.User', on_delete=models.CASCADE)

@@ -4,14 +4,14 @@
 
 {% block content %}
 
-<h1>User Borrow List</h1>
+<h1>User Borrowed List</h1>
 <div>
     <div>
         
         <p>Your borrowed books</p>
     </div>
     <div>
-        <h2>Your fine total: RM{{ total_fine }}</h2>
+        <h2>Your fine total: RM{{ total_fine|default_if_none:"0.00" }}</h2>
     </div>
 </div>
 <br>
